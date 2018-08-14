@@ -1,4 +1,4 @@
-// import * as Konva from "konva";
+import * as Konva from "konva";
 import { ARROW_RIGHT, ARROW_LEFT } from "./arrowPath";
 import { ARRAY_DAYS } from "./calendarData";
 import CalendarUtil from "./CalendarUtil";
