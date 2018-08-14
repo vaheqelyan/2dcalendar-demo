@@ -103,7 +103,7 @@ class Calendar {
                 });
                 //this.onClickItem
 
-                txt.on("click",this.onClickItem.bind(this));
+                txt.on("tap",this.onClickItem.bind(this));
                 // txt.addEv
                 group_item.add(rect);
                 group_item.add(txt);
@@ -180,7 +180,7 @@ class Calendar {
             }
         });
 
-        path.on("mousedown", this.prev);
+        path.on("tap", this.prev);
 
         return path;
     }
@@ -206,7 +206,7 @@ class Calendar {
                 y: 1
             }
         });
-        node.on("mousedown", this.next.bind(this));
+        node.on("tap", this.next.bind(this));
         return node;
     }
     public addHeader(): Konva.Rect {
@@ -319,7 +319,7 @@ class Calendar {
             y: 5.5,
             x: 4
         });
-        node.on("mousedown", this.prev.bind(this));
+        node.on("tap", this.prev.bind(this));
         return node;
     }
     public createRightBack(): Konva.Rect {
@@ -331,7 +331,7 @@ class Calendar {
             y: 5.5,
             x: 39 * 6
         });
-        node.on("mousedown", this.next.bind(this));
+        node.on("tap", this.next.bind(this));
         return node;
     }
     public makeHeader() {
