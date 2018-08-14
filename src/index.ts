@@ -54,6 +54,8 @@ class Calendar {
             height
         });
 
+        // this.stage.on('click',()=>alert('asd'))
+        // document.onclick = ()=>alert('ads')
         this.year = year;
         this.moth = moth;
 
@@ -99,8 +101,10 @@ class Calendar {
                     width: 39,
                     lineHeight: 2.5
                 });
-                txt.on("click", this.onClickItem);
+                //this.onClickItem
 
+                txt.on("click",this.onClickItem.bind(this));
+                // txt.addEv
                 group_item.add(rect);
                 group_item.add(txt);
 
@@ -219,7 +223,7 @@ class Calendar {
     }
     next() {
         // console.log(this.curr.text())
-        const  getselectedtext = this.curr.text();
+        // const  getselectedtext = this.curr.text();
         if (this.moth >= 12) {
             this.year += 1;
             this.moth = 1;
@@ -243,13 +247,13 @@ class Calendar {
                     ].getChildren()[1];
                     // console.log(val)
                     const updateText = "blank" ? "-" : this.getDayNumber(val);
-                    if(this.getDayNumber(val) == getselectedtext) {
-                        this.curr.getParent().getChildren()[0].fill('white');
-                        this.curr.fill('black')
-                        textItem.getParent().getChildren()[0].fill("red")
-                        textItem.fill('white')
-                        this.curr = textItem;
-                    }
+                    // if(this.getDayNumber(val) == getselectedtext) {
+                    //     this.curr.getParent().getChildren()[0].fill('white');
+                    //     this.curr.fill('black')
+                    //     textItem.getParent().getChildren()[0].fill("red")
+                    //     textItem.fill('white')
+                    //     this.curr = textItem;
+                    // }
                     // console.log(updateText)
                     // if(updateText === getselectedtext) {
                     //     console.log('yeah')
